@@ -1,0 +1,18 @@
+StakeToken/
+├── contracts/
+│   ├── StakeToken.sol
+│   └── Migrations.sol
+├── migrations/
+│   ├── 1_initial_migration.js
+│   └── 2_deploy_contracts.js
+├── test/
+│   └── StakeToken.test.js
+├── scripts/
+│   └── deploy.js
+├── frontend/
+│   ├── index.html
+│   ├── app.js
+│   └── style.css
+├── truffle-config.js
+├── package.json
+└── README.md
