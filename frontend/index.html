@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StakeToken DApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🪙 StakeToken</h1>
+            <p>Стейкайте токени та отримуйте винагороди!</p>
+        </header>
+
+        <div class="wallet-section">
+            <button id="connectWallet" class="btn-primary">Підключити гаманець</button>
+            <div id="walletInfo" class="hidden">
+                <p>Адреса: <span id="userAddress"></span></p>
+                <p>Баланс: <span id="tokenBalance"></span> STKN</p>
+            </div>
+        </div>
+
+        <div class="staking-section">
+            <div class="card">
+                <h3>💰 Стейкінг</h3>
+                <div class="input-group">
+                    <input type="number" id="stakeAmount" placeholder="Кількість токенів" min="0">
+                    <button id="stakeBtn" class="btn-secondary">Застейкати</button>
+                </div>
+                
+                <div class="info-row">
+                    <span>Застейкано: <span id="stakedAmount">0</span> STKN</span>
+                    <span>APY: 10%</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🎁 Винагороди</h3>
+                <div class="reward-info">
+                    <p>Доступно: <span id="pendingReward">0</span> STKN</p>
+                    <button id="claimBtn" class="btn-success">Забрати винагороди</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>📤 Відстейкінг</h3>
+                <div class="input-group">
+                    <input type="number" id="unstakeAmount" placeholder="Кількість токенів" min="0">
+                    <button id="unstakeBtn" class="btn-warning">Відстейкати</button>
+                </div>
+                <small>Мінімальний період стейкінгу: 7 днів</small>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <h4>Загальна статистика</h4>
+                <p>Всього застейкано: <span id="totalStaked">0</span> STKN</p>
+                <p>Пул винагород: <span id="rewardPool">0</span> STKN</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
