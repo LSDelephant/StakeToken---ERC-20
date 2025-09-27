@@ -1,0 +1,33 @@
+{
+  "name": "staketoken-dapp",
+  "version": "1.0.0",
+  "description": "ERC-20 token з функціональністю стейкінгу",
+  "main": "index.js",
+  "scripts": {
+    "test": "truffle test",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "deploy:sepolia": "truffle migrate --network sepolia",
+    "verify": "truffle run verify StakeToken --network sepolia"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "solidity",
+    "staking",
+    "defi",
+    "erc20"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
+    "@truffle/hdwallet-provider": "^2.1.15",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "truffle": "^5.11.5",
+    "truffle-plugin-verify": "^0.6.7"
+  }
+}
